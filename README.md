@@ -1,6 +1,6 @@
 # EnvGS: Modeling View-Dependent Appearance with Environment Gaussian
 
-### [Project Page](https://zju3dv.github.io/envgs) | [Paper](https://arxiv.org/abs/2412.15215) | [Arxiv](https://arxiv.org/abs/2412.15215)
+## [Project Page](https://zju3dv.github.io/envgs) | [Paper](https://arxiv.org/abs/2412.15215) | [Arxiv](https://arxiv.org/abs/2412.15215)
 
 <!-- ![python](https://img.shields.io/github/languages/top/zju3dv/EnvGS)
 ![star](https://img.shields.io/github/stars/zju3dv/EnvGS)
@@ -12,15 +12,15 @@
 
 ![teaser](assets/teaser.png)
 
-### Pipeline
+## Pipeline
 
 ![pipeline](assets/pipeline.png)
 
-### Code
+## Code
 
 🤩 Our code and Gaussian tracer are coming soon, stay tuned!
 
-### Citation
+## Citation
 
 If you find this code useful for your research, please use the following BibTeX entry.
 
