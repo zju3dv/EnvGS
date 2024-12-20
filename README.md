@@ -1,6 +1,6 @@
 # EnvGS: Modeling View-Dependent Appearance with Environment Gaussian
 
-### [Project Page](https://zju3dv.github.io/envgs) | [Paper](https://arxiv.org/abs/xxxxx) | [Arxiv](https://arxiv.org/abs/xxxxx)
+### [Project Page](https://zju3dv.github.io/envgs) | [Paper](https://arxiv.org/abs/2412.15215) | [Arxiv](https://arxiv.org/abs/2412.15215)
 
 <!-- ![python](https://img.shields.io/github/languages/top/zju3dv/EnvGS)
 ![star](https://img.shields.io/github/stars/zju3dv/EnvGS)
@@ -25,10 +25,13 @@
 If you find this code useful for your research, please use the following BibTeX entry.
 
 ```
-@article{xie2024envgs,
-    title={{EnvGS}: Modeling View-Dependent Appearance with Environment Gaussian},
-    author={Xie, Tao and Chen, Xi and Xu, Zhen and Xie, Yiman and Jin, Yudong and Shen, Yujun and Peng, Sida and Bao, Hujun and Zhou, Xiaowei},
-    journal={arXiv preprint arXiv:2412.},
-    year={2024}
+@misc{xie2024envgsmodelingviewdependentappearance,
+      title={EnvGS: Modeling View-Dependent Appearance with Environment Gaussian}, 
+      author={Tao Xie and Xi Chen and Zhen Xu and Yiman Xie and Yudong Jin and Yujun Shen and Sida Peng and Hujun Bao and Xiaowei Zhou},
+      year={2024},
+      eprint={2412.15215},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2412.15215}, 
 }
 ```
