@@ -43,5 +43,4 @@ If you find this code useful for your research, please use the following BibTeX 
   journal={arXiv preprint arXiv:2412.15215},
   year={2024}
 }
-}
 ```
