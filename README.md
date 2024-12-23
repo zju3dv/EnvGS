@@ -25,13 +25,11 @@
 If you find this code useful for your research, please use the following BibTeX entry.
 
 ```
-@misc{xie2024envgsmodelingviewdependentappearance,
-      title={EnvGS: Modeling View-Dependent Appearance with Environment Gaussian}, 
-      author={Tao Xie and Xi Chen and Zhen Xu and Yiman Xie and Yudong Jin and Yujun Shen and Sida Peng and Hujun Bao and Xiaowei Zhou},
-      year={2024},
-      eprint={2412.15215},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2412.15215}, 
+@article{xie2024envgs,
+  title={EnvGS: Modeling View-Dependent Appearance with Environment Gaussian},
+  author={Xie, Tao and Chen, Xi and Xu, Zhen and Xie, Yiman and Jin, Yudong and Shen, Yujun and Peng, Sida and Bao, Hujun and Zhou, Xiaowei},
+  journal={arXiv preprint arXiv:2412.15215},
+  year={2024}
+}
 }
 ```
