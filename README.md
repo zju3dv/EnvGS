@@ -20,6 +20,18 @@
 
 🤩 Our code and Gaussian tracer are coming soon, stay tuned!
 
+## Acknowledgments
+
+This work is implemented using our PyTorch framework, [EasyVolcap](https://github.com/zju3dv/EasyVolcap), feel free to explore it.
+
+- [EasyVolcap: Accelerating Neural Volumetric Video Research](https://github.com/zju3dv/EasyVolcap)
+
+We would also like to acknowledge the following inspiring prior work:
+
+- [NeRF-Casting: Improved View-Dependent Appearance with Consistent Reflections](https://dorverbin.github.io/nerf-casting/)
+- [Ref-NeRF: Structured View-Dependent Appearance for Neural Radiance Fields](https://dorverbin.github.io/refnerf/)
+- [3D Gaussian Splatting for Real-Time Radiance Field Rendering](https://github.com/graphdeco-inria/gaussian-splatting)
+
 ## Citation
 
 If you find this code useful for your research, please use the following BibTeX entry.
