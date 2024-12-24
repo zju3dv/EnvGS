@@ -18,7 +18,9 @@
 
 ## Code
 
-🤩 Our code and Gaussian tracer are coming soon, stay tuned!
+Our code and Gaussian tracer are coming soon, stay tuned!
+- [ ] Release 2D Gaussian ray tracer.
+- [ ] Release evaluation and training code.
 
 ## Acknowledgments
 
