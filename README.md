@@ -8,7 +8,7 @@
 
 > EnvGS: Modeling View-Dependent Appearance with Environment Gaussian<br>
 > [Tao Xie*](https://github.com/xbillowy), [Xi Chen*](https://github.com/Burningdust21), [Zhen Xu](https://zhenx.me), [Yiman Xie](https://zju3dv.github.io/envgs/), [Yudong Jin](https://github.com/krahets), [Yujun Shen](https://shenyujun.github.io), [Sida Peng](https://pengsida.net), [Hujun Bao](http://www.cad.zju.edu.cn/home/bao), [Xiaowei Zhou](https://xzhou.me)<br>
-> Arxiv 2024
+> arXiv 2024
 
 ![teaser](assets/teaser.png)
 
