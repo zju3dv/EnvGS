@@ -38,7 +38,7 @@ pip install submodule/diff-surfel-tracing
 Or the latest commit from GitHub:
 
 ```bash
-pip install -v git+https://github.com/xbillowy/diff-surfel-tracing#subdirectory=submodule/diff-surfel-tracing
+pip install -v git+https://github.com/zju3dv/EnvGS#subdirectory=submodule/diff-surfel-tracing
 ```
 
 
