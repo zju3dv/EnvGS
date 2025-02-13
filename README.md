@@ -12,7 +12,7 @@
 
 ***News***:
 
-- 24.01.07: The [2D Gaussian Tracer](submodule/diff-surfel-tracing/README.md) for *EnvGS* has also been open-sourced.
+- 25.01.07: The [2D Gaussian Tracer](submodule/diff-surfel-tracing/README.md) for *EnvGS* has also been open-sourced.
 
 ![teaser](assets/teaser.png)
 
