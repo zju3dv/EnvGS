@@ -19,7 +19,7 @@
 
 ***News***:
 
-- 25.03.23: The training and evaluation code of [*EnvGS*](https://zju3dv.github.io/envgs) has been released.
+- 25.03.22: The training and evaluation code of [*EnvGS*](https://zju3dv.github.io/envgs) has been released.
 - 25.02.27: [*EnvGS*](https://zju3dv.github.io/envgs) has been accepted to CVPR 2025.
 - 25.01.07: The [*2D Gaussian Tracer*](submodule/diff-surfel-tracing/README.md) for [*EnvGS*](https://zju3dv.github.io/envgs) has been open-sourced.
 
