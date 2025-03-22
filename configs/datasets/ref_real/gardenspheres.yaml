@@ -1,0 +1,28 @@
+configs:
+    - configs/datasets/ref_real/ref_real.yaml
+
+dataloader_cfg:
+    dataset_cfg: &dataset_cfg
+        data_root: data/datasets/refnerf/ref_real/gardenspheres
+        view_sample: [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 21, 22, 23,
+                      25, 26, 27, 28, 29, 30, 31, 33, 34, 35, 36, 37, 38, 39, 41, 42, 43, 44, 45,
+                      46, 47, 49, 50, 51, 52, 53, 54, 55, 57, 58, 59, 60, 61, 62, 63, 65, 66, 67,
+                      68, 69, 70, 71, 73, 74, 75, 76, 77, 78, 79, 81, 82, 83, 84, 85, 86, 87, 89,
+                      90, 91, 92, 93, 94, 95, 97, 98, 99, 100, 101, 102, 103, 105, 106, 107, 108,
+                      109, 110, 111, 113, 114, 115, 116, 117, 118, 119, 121, 122, 123, 124, 125,
+                      126, 127, 129, 130, 131, 132, 133, 134, 135, 137, 138, 139, 140, 141, 142,
+                      143, 145, 146, 147, 148, 149, 150]
+
+val_dataloader_cfg:
+    dataset_cfg:
+        <<: *dataset_cfg
+        view_sample: [0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144]
+
+model_cfg:
+    sampler_cfg:
+        preload_gs: data/datasets/refnerf/ref_real/gardenspheres/sparse/0/points3D.ply
+        spatial_scale: 5.209678745269776
+        # Environment Gaussian
+        env_preload_gs: data/datasets/refnerf/ref_real/gardenspheres/envs/points3D.ply
+        # env_bounds: [[-30.0, -30.0, -30.0], [30.0, 30.0, 30.0]]
+        env_bounds: [[-20.0, -20.0, -20.0], [20.0, 20.0, 20.0]]

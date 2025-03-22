@@ -1,0 +1,12 @@
+dataloader_cfg:
+    dataset_cfg: &dataset_cfg
+        ratio: 0.25
+
+val_dataloader_cfg:
+    dataset_cfg:
+        <<: *dataset_cfg
+
+model_cfg:
+    sampler_cfg:
+        bounds: [[-20.0, -20.0, -20.0], [20.0, 20.0, 20.0]]
+        env_bounds: [[-20.0, -20.0, -20.0], [20.0, 20.0, 20.0]]

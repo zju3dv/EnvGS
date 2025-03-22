@@ -1,0 +1,9 @@
+[submodule "submodules/diff-surfel-rasterizations"]
+	path = submodules/diff-surfel-rasterizations
+	url = https://github.com/xbillowy/diff-surfel-rasterizations.git
+[submodule "submodules/diff-surfel-tracing"]
+	path = submodules/diff-surfel-tracing
+	url = https://github.com/xbillowy/diff-surfel-tracing.git
+[submodule "submodules/StableNormal"]
+	path = submodules/StableNormal
+	url = https://github.com/xbillowy/StableNormal.git

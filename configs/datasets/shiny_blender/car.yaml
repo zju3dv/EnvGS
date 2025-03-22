@@ -1,0 +1,20 @@
+configs:
+    - configs/datasets/shiny_blender/shiny_blender.yaml
+
+dataloader_cfg:
+    dataset_cfg: &dataset_cfg
+        data_root: data/datasets/refnerf/shiny_blender/car/train
+        view_sample: [0, null, 1]
+
+val_dataloader_cfg:
+    dataset_cfg:
+        data_root: data/datasets/refnerf/shiny_blender/car/test
+        view_sample: [0, null, 1]
+
+model_cfg:
+    sampler_cfg:
+        preload_gs: data/datasets/refnerf/shiny_blender/car/points/pcds/points3d.ply
+        spatial_scale: 5.202147674560547
+        # Environment Gaussian
+        env_preload_gs: data/datasets/refnerf/shiny_blender/car/points/envs/points3d.ply
+        env_bounds: [[-50.0, -50.0, -50.0], [50.0, 50.0, 50.0]]

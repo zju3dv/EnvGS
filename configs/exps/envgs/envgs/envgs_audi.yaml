@@ -1,0 +1,14 @@
+configs:
+    - configs/base.yaml # default arguments for the whole codebase
+    - configs/models/envgs.yaml # rtgs model configuration
+    - configs/datasets/envgs/audi.yaml # dataset usage configuration
+
+model_cfg:
+    supervisor_cfg:
+        perc_loss_start_iter: 45000 # less iterations for faster training
+
+runner_cfg:
+    epochs: 120
+
+# prettier-ignore
+exp_name: {{fileBasenameNoExtension}}

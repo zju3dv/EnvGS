@@ -1,0 +1,14 @@
+configs:
+    - configs/base.yaml # default arguments for the whole codebase
+    - configs/models/envgs.yaml # rtgs model configuration
+    - configs/datasets/ref_real/toycar.yaml # dataset usage configuration
+
+model_cfg:
+    sampler_cfg:
+        sh_start_iter: 10000
+
+runner_cfg:
+    epochs: 60
+
+# prettier-ignore
+exp_name: {{fileBasenameNoExtension}}

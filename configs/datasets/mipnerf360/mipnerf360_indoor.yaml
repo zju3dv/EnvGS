@@ -1,0 +1,13 @@
+dataloader_cfg:
+    dataset_cfg: &dataset_cfg
+        ratio: 0.5
+        # ratio: 0.25 # half of the standard ratio for faster training
+
+val_dataloader_cfg:
+    dataset_cfg:
+        <<: *dataset_cfg
+
+model_cfg:
+    sampler_cfg:
+        bounds: [[-50.0, -50.0, -50.0], [50.0, 50.0, 50.0]]
+        env_bounds: [[-50.0, -50.0, -50.0], [50.0, 50.0, 50.0]]

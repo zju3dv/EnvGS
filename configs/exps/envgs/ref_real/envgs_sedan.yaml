@@ -1,0 +1,19 @@
+configs:
+    - configs/base.yaml # default arguments for the whole codebase
+    - configs/models/envgs.yaml # rtgs model configuration
+    - configs/datasets/ref_real/sedan.yaml # dataset usage configuration
+
+model_cfg:
+    sampler_cfg:
+        # Base Gaussian
+        densify_until_iter: 30000
+        normal_prop_until_iter: 24000
+        color_sabotage_until_iter: 24000
+        # Environment Gaussian
+        env_densify_until_iter: 30000
+
+runner_cfg:
+    epochs: 120
+
+# prettier-ignore
+exp_name: {{fileBasenameNoExtension}}
