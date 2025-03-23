@@ -63,7 +63,7 @@ pip install submodules/diff-surfel-rasterizations/diff-surfel-rasterization-wet-
 pip install submodules/diff-surfel-rasterizations/diff-surfel-rasterization-wet-ch07
 ```
 
-Finally, you may want to install the dependencies of the [StableNormal](https://github.com/Stable-X/StableNormal) following the instructions we provided in [`README.md`](submodules/StableNormal/README.md) if you need to prepare monocular normal maps for your custom dataset.
+Finally, you may want to install the dependencies of the [StableNormal](https://github.com/Stable-X/StableNormal) following the instructions we provided in [`README.md`]([submodules/StableNormal/README.md](https://github.com/xbillowy/StableNormal/blob/main/README.md)) if you need to prepare monocular normal maps for your custom dataset.
 
 
 ## Datasets
