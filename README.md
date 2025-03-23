@@ -319,7 +319,7 @@ NOTE: There are some specific dataset-related parameters required by *EnvGS*, yo
 
 Until now, such data preparation is generalizable across all multi-view datasets supported by ***EasyVolcap***, you should always create the corresponding dataset configurations for your custom ones as this helps in reproducibility.
 
-Our next step is to create the corresponding *EnvGS* configuration for running experiments on the `audi` scene. You can create a [`configs/exps/envgs/envgs/audi.yaml`](configs/exps/envgs/envgs/audi.yaml) to hold such information, you can look at the actual file to get a grasp of what info this file should contain:
+Our next step is to create the corresponding *EnvGS* configuration for running experiments on the `audi` scene. You can create a [`configs/exps/envgs/envgs/audi.yaml`](configs/exps/envgs/envgs/envgs_audi.yaml) to hold such information, you can look at the actual file to get a grasp of what info this file should contain:
 
 ```yaml
 configs:
