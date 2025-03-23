@@ -173,7 +173,7 @@ Please pay attention to the console logs and keep an eye out for the loss and me
 
 For preparation and training on custom datasets, you can follow the instructions in the [Custom Datasets Section](#custom-datasets), and then run the training and rendering commands specified above.
 
-<details> <summary> Some useful parameters you can explore with, good luck with them 😜</summary>
+<details> <summary> Some useful parameters you can explore with, good luck with them </summary>
 
 + `runner_cfg.resume`: whether to restart the training from where you stop the last time.
 + `runner_cfg.epochs`: number of epochs to train, a epoch consist 500 iterations by default.
