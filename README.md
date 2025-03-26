@@ -152,19 +152,19 @@ We provide some examples below:
 
 ```shell
 # Train on the Ref-Real dataset
-ecb-train -c configs/exps/envgs/ref_real/envgs_sedan.yaml exp_name=envgs/ref_real/envgs_sedan # sedan
-ecb-train -c configs/exps/envgs/ref_real/envgs_spheres.yaml exp_name=envgs/ref_real/envgs_spheres # spheres
-ecb-train -c configs/exps/envgs/ref_real/envgs_toycar.yaml exp_name=envgs/ref_real/envgs_toycar # toycar
+evc-train -c configs/exps/envgs/ref_real/envgs_sedan.yaml exp_name=envgs/ref_real/envgs_sedan # sedan
+evc-train -c configs/exps/envgs/ref_real/envgs_spheres.yaml exp_name=envgs/ref_real/envgs_spheres # spheres
+evc-train -c configs/exps/envgs/ref_real/envgs_toycar.yaml exp_name=envgs/ref_real/envgs_toycar # toycar
 
 # Train on the EnvGS dataset
-ecb-train -c configs/exps/envgs/envgs/envgs_audi.yaml exp_name=envgs/envgs/envgs_audi # audi
-ecb-train -c configs/exps/envgs/envgs/envgs_dog.yaml exp_name=envgs/envgs/envgs_dog # dog
+evc-train -c configs/exps/envgs/envgs/envgs_audi.yaml exp_name=envgs/envgs/envgs_audi # audi
+evc-train -c configs/exps/envgs/envgs/envgs_dog.yaml exp_name=envgs/envgs/envgs_dog # dog
 
 # Train on the NeRF-Casting dataset, you need to acquire the original dataset first
-ecb-train -c configs/exps/envgs/nerf-casting/envgs_compact.yaml exp_name=envgs/nerf-casting/envgs_compact
-ecb-train -c configs/exps/envgs/nerf-casting/envgs_grinder.yaml exp_name=envgs/nerf-casting/envgs_grinder
-ecb-train -c configs/exps/envgs/nerf-casting/envgs_hatchback.yaml exp_name=envgs/nerf-casting/envgs_hatchback
-ecb-train -c configs/exps/envgs/nerf-casting/envgs_toaster.yaml exp_name=envgs/nerf-casting/envgs_toaster
+evc-train -c configs/exps/envgs/nerf-casting/envgs_compact.yaml exp_name=envgs/nerf-casting/envgs_compact
+evc-train -c configs/exps/envgs/nerf-casting/envgs_grinder.yaml exp_name=envgs/nerf-casting/envgs_grinder
+evc-train -c configs/exps/envgs/nerf-casting/envgs_hatchback.yaml exp_name=envgs/nerf-casting/envgs_hatchback
+evc-train -c configs/exps/envgs/nerf-casting/envgs_toaster.yaml exp_name=envgs/nerf-casting/envgs_toaster
 ```
 
 We provide the complete training scripts for ***EnvGS*** in the [`scripts/envgs`](scripts/envgs). You can run these scripts to train ***EnvGS*** on the *Ref-Real*, *EnvGS*, and *NeRF-Casting* datasets.
