@@ -88,7 +88,7 @@ For the *Ref-Real* dataset, you can download our pre-processed version in this [
 
 If you want to prepare the datasets by yourself, please download the original *Ref-Real* dataset from the [official website](https://dorverbin.github.io/refnerf/), and contact the authors of [NeRF-Casting](https://dorverbin.github.io/nerf-casting/) for the *NeRF-Casting* dataset. After downloading, the extracted files should be placed at `data/datasets/original/ref_real` and `data/datasets/original/nerf-casting` respectively.
 
-Then, you can use the following scripts to convert the original ***COLMAP*** dataset to the ***EasyVolcap*** format, take the *Ref-NeRF* dataset as an example:
+Then, you can use the following scripts to convert the original ***COLMAP*** dataset to the ***EasyVolcap*** format, taking the *Ref-NeRF* dataset as an example:
 
 ```shell
 # Convert the original Ref-NeRF dataset from COLMAP format to EasyVolcap format
@@ -111,16 +111,16 @@ For the *EnvGS* dataset, you can download it in this [Google Drive link](https:/
 
 ### Rendering
 
-You can download our pre-trained models from this [Google Drive link](https://drive.google.com/drive/folders/1p3bohsSSVf1mP3K26Sy47nm1Fl_YvE7I?usp=sharing). After downloading, place them into `data/trained_model` (e.g. `data/trained_model/envgs/envgs/envgs_audi/latests.pt`).
+You can download our pre-trained models from this [Google Drive link](https://drive.google.com/drive/folders/1p3bohsSSVf1mP3K26Sy47nm1Fl_YvE7I?usp=sharing). After downloading, place them into `data/trained_model` (e.g., `data/trained_model/envgs/envgs/envgs_audi/latest.pt`).
 
 Note: The pre-trained models were created with the release codebase. This code base and corresponding environment has been cleaned up and includes bug fixes, hence the metrics you get from evaluating them will differ from those in the paper.
 
-Here we provide their naming conventions which correspond to their respective config files:
+Here we provide their naming conventions, which correspond to their respective config files:
 
 + `envgs/envgs/envgs_audi` (without any postfixes) is the EnvGS model trained on `audi` scene of the *EnvGS* dataset, corresponds to the experiment config [`configs/exps/envgs/envgs/envgs_audi.yaml`](configs/exps/envgs/envgs/envgs_audi.yaml).
 + `envgs/ref_real/envgs_spheres` (without any postfixes) is the EnvGS model trained on `gardenspheres` scene of the *Ref-Real* dataset, corresponds to the experiment config [`configs/exps/envgs/ref_real/envgs_spheres.yaml`](configs/exps/envgs/ref_real/envgs_spheres.yaml).
 
-After placing the models and datasets in their respective places, you can run ***EasyVolcap*** with their corresponding experiment configs located in [configs/exps/envgs](configs/exps/envgs) to perform rendering operations with ***EnvGS***.
+After placing the models and datasets in their respective places, you can run ***EasyVolcap*** with their corresponding experiment configs located in [`configs/exps/envgs`](configs/exps/envgs) to perform rendering operations with ***EnvGS***.
 
 For example, to render the `audi` scene of the *EnvGS* dataset, you can run:
 
@@ -137,10 +137,10 @@ evc-test -c configs/exps/envgs/envgs/envgs_audi.yaml,configs/specs/orbit.yaml # 
 evc-test -c configs/exps/envgs/envgs/envgs_audi.yaml,configs/specs/spiral.yaml exp_name=envgs/envgs/envgs_audi val_dataloader_cfg.dataset_cfg.render_size=-1,-1 val_dataloader_cfg.dataset_cfg.render_size_default=-1,-1 val_dataloader_cfg.dataset_cfg.camera_path_intri=data/path/envgs/audi/d4/intri.yml val_dataloader_cfg.dataset_cfg.camera_path_extri=data/path/envgs/audi/d4/extri.yml val_dataloader_cfg.dataset_cfg.n_render_views=480 val_dataloader_cfg.dataset_cfg.interp_type=NONE val_dataloader_cfg.dataset_cfg.interp_cfg.smoothing_term=-1.0 runner_cfg.visualizer_cfg.video_fps=30 runner_cfg.visualizer_cfg.save_tag=path # the result will be saved at data/novel_view/
 
 # GUI Rendering
-evc-gui -c configs/exps/envgs/envgs/envgs_audi.yaml viewer_cfg.window_size=994,743
+evc-gui -c configs/exps/envgs/envgs/envgs_audi.yaml viewer_cfg.window_size=540,960
 ```
 
-For rendering an existing novel view camera path, you can download our provided novel view camera path for each scene at the [Google Drive link](https://drive.google.com/drive/folders/1IzsRa1PdPUn1O15zEBeOGvxToZSZpZ_w?usp=drive_link), NOTE: this is the same novel view camera path we show in our [Project Page](https://zju3dv.github.io/envgs).
+For rendering an existing novel view camera path, you can download our provided novel view camera path for each scene at the [Google Drive link](https://drive.google.com/drive/folders/1IzsRa1PdPUn1O15zEBeOGvxToZSZpZ_w?usp=drive_link). NOTE: This is the same novel view camera path we show in our [Project Page](https://zju3dv.github.io/envgs).
 
 ### Training
 
@@ -169,17 +169,17 @@ evc-train -c configs/exps/envgs/nerf-casting/envgs_toaster.yaml exp_name=envgs/n
 
 We provide the complete training scripts for ***EnvGS*** in the [`scripts/envgs`](scripts/envgs). You can run these scripts to train ***EnvGS*** on the *Ref-Real*, *EnvGS*, and *NeRF-Casting* datasets.
 
-Please pay attention to the console logs and keep an eye out for the loss and metrics. All records and training time evalutions will be saved to `data/record` and `data/result` respectively. So launch your tensorboard or other viewing tools for training inspection.
+Please pay attention to the console logs and keep an eye out for the loss and metrics. All records and training time evalutions will be saved to `data/record` and `data/result` respectively. So, launch your tensorboard or other viewing tools for training inspection.
 
 For preparation and training on custom datasets, you can follow the instructions in the [Custom Datasets Section](#custom-datasets), and then run the training and rendering commands specified above.
 
 <details> <summary> Some useful parameters you can explore with, good luck with them </summary>
 
-+ `runner_cfg.resume`: whether to restart the training from where you stop the last time.
++ `runner_cfg.resume`: whether to restart the training from where you stopped the last time.
 + `runner_cfg.epochs`: number of epochs to train, a epoch consist 500 iterations by default.
-+ `model_cfg.supervisor_cfg.perc_loss_weight=0.01`: the default LPIPS loss weight is set to 0.01, you can try setting it to 0.1, which may produce better for some scenes, or you can disable it by setting it to 0.0 for faster training, and comparable results.
++ `model_cfg.supervisor_cfg.perc_loss_weight=0.01`: the default LPIPS loss weight is set to 0.01, you can try setting it to 0.1, which may produce better results for some scenes, or you can disable it by setting it to 0.0 for faster training, and comparable results.
 + `model_cfg.sampler_cfg.init_specular=0.001`: you can try to set it to a larger value like 0.01 or 0.1 for scenes or objects with strong reflection for better results.
-+ `model_cfg.sampler_cfg.env_max_gs=2000000`: set the maximum number of the environment Gaussian.
++ `model_cfg.sampler_cfg.env_max_gs=2000000`: set the maximum number of environment Gaussian.
 + `model_cfg.sampler_cfg.normal_prop_until_iter=18000`: maximum iteration that normal propagation is performed.
 + `model_cfg.sampler_cfg.color_sabotage_until_iter=18000`: maximum iteration that color sabotage is performed.
 + `model_cfg.sampler_cfg.densify_until_iter=21000`: maximum densification iteration for the base Gaussian.
