@@ -60,7 +60,7 @@ class HardwareRendering(nn.Module):
         v = v[..., :3, 0]  # (P * V, 3)
 
         # Generate face indices
-        indices = torch.arange(0, v.shape[0]).reshape(P, V).to(T.device)  # (P, V)
+        indices = torch.arange(0, v.shape[0], device=T.device).reshape(P, V) # (P, V)
         f = torch.stack([indices[:, :3], indices[:, 1:]], dim=1).reshape(-1, 3).int()  # (P, 2, 3) -> (P * 2, 3)
 
         # NOTE: contiguous() is necessary for the following OptiX CUDA operations !!!
