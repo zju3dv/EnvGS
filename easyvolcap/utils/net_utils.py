@@ -331,7 +331,7 @@ def load_pretrained(model_dir: str, resume: bool = True, epoch: int = -1, ext: s
         return None, None
 
     if ext == '.pt' or ext == '.pth':
-        pretrained = dotdict(torch.load(model_path, 'cpu'))
+        pretrained = dotdict(torch.load(model_path, 'cpu', weights_only=False))
     else:
         from easyvolcap.utils.data_utils import to_tensor
         model = to_tensor(dict(**np.load(model_path)))
