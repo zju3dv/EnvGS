@@ -19,6 +19,7 @@
 
 ***News***:
 
+- 25.03.30: We fix the submodule bugs and make the installation smoother, just follow the instructions, no other extra dependencies are needed.
 - 25.03.22: The training and evaluation code of [*EnvGS*](https://zju3dv.github.io/envgs) has been released.
 - 25.02.27: [*EnvGS*](https://zju3dv.github.io/envgs) has been accepted to CVPR 2025.
 - 25.01.07: The [*2D Gaussian Tracer*](https://github.com/xbillowy/diff-surfel-tracing) for [*EnvGS*](https://zju3dv.github.io/envgs) has been open-sourced.
@@ -35,7 +36,9 @@ conda activate envgs
 
 # Install PyTorch
 # Be sure you have CUDA installed, CUDA 11.8 is recommended for the best performance
-pip install torch torchvision torchaudio -f https://download.pytorch.org/whl/torch_stable.html
+# NOTE: you need to make sure the CUDA version used to compile the torch is the same as the version you installed
+# NOTE: for avoiding any mismatch when installing other dependencies like Pytorch3D
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118  # change the version if you have different CUDA version
 
 # Install basic pip dependencies
 cat requirements.txt | sed -e '/^\s*-.*$/d' -e '/^\s*#.*$/d' -e '/^\s*$/d' | awk '{split($0, a, "#"); if (length(a) > 1) print a[1]; else print $0;}' | awk '{split($0, a, "@"); if (length(a) > 1) print a[2]; else print $0;}' | xargs -n 1 pip install
@@ -48,22 +51,26 @@ pip install -e . --no-build-isolation --no-deps
 
 Please refer to the [installation guide of ***EasyVolcap***](https://github.com/zju3dv/EasyVolcap/tree/main/readme.md#installation) for more detailed instructions.
 
-After setting up the basic environment, install the additional dependencies for *EnvGS*:
+After setting up the basic environment, install the additional dependencies for *EnvGS*.
+
+NOTE: We have fixed the missing dependencies issues and potential bugs in the submodules, you can now simply install the dependencies by running the following command, no any extra dependencies are needed:
 
 ```shell
 # Clone the submodules
 git submodule update --init --recursive
 
 # Install the 2D Gaussian Tracer
-pip install -v submodules/diff-surfel-tracing
+pip install -v submodules/diff-surfel-tracing  # use `-v` for verbose output
 
-# Install the modified 2D Gaussian rasterizer
-pip install submodules/diff-surfel-rasterizations/diff-surfel-rasterization-wet
-pip install submodules/diff-surfel-rasterizations/diff-surfel-rasterization-wet-ch05
-pip install submodules/diff-surfel-rasterizations/diff-surfel-rasterization-wet-ch07
+# Install the modified 2D Gaussian rasterizers
+pip install submodules/diff-surfel-rasterizations/diff-surfel-rasterization-wet submodules/diff-surfel-rasterizations/diff-surfel-rasterization-wet-ch05 submodules/diff-surfel-rasterizations/diff-surfel-rasterization-wet-ch07
 ```
 
-Finally, you may want to install the dependencies of the [StableNormal](https://github.com/Stable-X/StableNormal) following the instructions we provided in [`README.md`]([submodules/StableNormal/README.md](https://github.com/xbillowy/StableNormal/blob/main/README.md)) if you need to prepare monocular normal maps for your custom dataset.
+Finally, you may want to install the dependencies of the [StableNormal](https://github.com/Stable-X/StableNormal) to prepare monocular normal maps for your custom dataset, you can simply install the dependencies by running the following command:
+
+```shell
+pip install -r submodules/StableNormal/requirements.txt
+```
 
 
 ## Datasets

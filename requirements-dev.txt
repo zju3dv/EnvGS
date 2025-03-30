@@ -85,7 +85,7 @@ func_timeout
 pycocotools
 tensorboardX
 # pyopengl @ git+https://github.com/mmatl/pyopengl # MARK: might not render
-human_body_prior @ git+https://github.com/nghorbani/human_body_prior
+# human_body_prior @ git+https://github.com/nghorbani/human_body_prior
 
 # https://storage.googleapis.com/open3d-releases-master/python-wheels/open3d-0.16.0-cp310-cp310-manylinux_2_27_x86_64.whl
 # http://www.open3d.org/docs/latest/getting_started.html (install the development version from here if the previsou link is expired and python is too new)
@@ -145,12 +145,12 @@ pyturbojpeg
 
 # For gaussian
 simple_knn @ git+https://gitlab.inria.fr/bkerbl/simple-knn
-diff_gauss @ git+https://github.com/dendenxu/diff-gaussian-rasterization
-diff_gaussian_rasterization @ git+https://github.com/graphdeco-inria/diff-gaussian-rasterization
+# diff_gauss @ git+https://github.com/dendenxu/diff-gaussian-rasterization
+# diff_gaussian_rasterization @ git+https://github.com/graphdeco-inria/diff-gaussian-rasterization
 # diff_gauss @ git+https://github.com/slothfulxtx/diff-gaussian-rasterization
-diff_point_rasterization @ git+https://github.com/dendenxu/diff-point-rasterization # rasterization of 4k4d's point representation, gradient might still crash
-diff_mip_rasterization @ git+https://github.com/dendenxu/diff-mip-rasterization
+# diff_point_rasterization @ git+https://github.com/dendenxu/diff-point-rasterization # rasterization of 4k4d's point representation, gradient might still crash
+# diff_mip_rasterization @ git+https://github.com/dendenxu/diff-mip-rasterization
 # TODO: Figure out a way to install taichi-nightly both from pip install -r and xargs
 # -i https://pypi.taichi.graphics/simple taichi-nightly
 # taichi-splatting # depends on nightly build of taichi, install later than that one
-gsplat @ git+https://github.com/dendenxu/gsplat # more aggressive numerical stability check for 4D
+# gsplat @ git+https://github.com/dendenxu/gsplat # more aggressive numerical stability check for 4D
