@@ -1,6 +1,6 @@
 configs:
     - configs/base.yaml # default arguments for the whole codebase
-    - configs/models/envgs.yaml # rtgs model configuration
+    - configs/models/envgs.yaml # envgs model configuration
     - configs/datasets/envgs/dog.yaml # dataset usage configuration
 
 model_cfg:

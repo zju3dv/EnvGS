@@ -1,6 +1,6 @@
 configs:
     - configs/base.yaml # default arguments for the whole codebase
-    - configs/models/envgs.yaml # rtgs model configuration
+    - configs/models/envgs.yaml # envgs model configuration
     - configs/datasets/ref_real/sedan.yaml # dataset usage configuration
 
 model_cfg:
@@ -11,6 +11,7 @@ model_cfg:
         color_sabotage_until_iter: 24000
         # Environment Gaussian
         env_densify_until_iter: 30000
+        acc_filtering_start_iter: 30000
 
 runner_cfg:
     epochs: 120

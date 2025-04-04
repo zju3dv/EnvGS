@@ -1,12 +1,14 @@
 configs:
     - configs/base.yaml # default arguments for the whole codebase
-    - configs/models/envgs.yaml # rtgs model configuration
+    - configs/models/envgs.yaml # envgs model configuration
     - configs/datasets/ref_real/gardenspheres.yaml # dataset usage configuration
 
 model_cfg:
     sampler_cfg:
         init_specular: 0.1 # large initial specular
         sh_start_iter: 10000 # let the base Gaussian be view-independent first
+    supervisor_cfg:
+        perc_loss_weight: 0.1
 
 # prettier-ignore
 exp_name: {{fileBasenameNoExtension}}

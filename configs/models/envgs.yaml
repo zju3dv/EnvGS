@@ -77,7 +77,7 @@ model_cfg:
         norm_loss_weight: 0.01 # use monocular normal prior
         norm_loss_start_iter: 0
         use_dpt_scale_norm_loss: True
-        perc_loss_weight: 0.1 # use perceptual loss
+        perc_loss_weight: 0.01 # use perceptual loss
         perc_loss_start_iter: 21000
 
 dataloader_cfg: &dataloader_cfg
