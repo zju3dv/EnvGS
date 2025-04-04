@@ -38,7 +38,7 @@ conda activate envgs
 # Be sure you have CUDA installed, CUDA 11.8 is recommended for the best performance
 # NOTE: you need to make sure the CUDA version used to compile the torch is the same as the version you installed
 # NOTE: for avoiding any mismatch when installing other dependencies like Pytorch3D
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118  # change the version if you have different CUDA version
+pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu118  # change the CUDA version according to your own CUDA version
 
 # Install basic pip dependencies
 cat requirements.txt | sed -e '/^\s*-.*$/d' -e '/^\s*#.*$/d' -e '/^\s*$/d' | awk '{split($0, a, "#"); if (length(a) > 1) print a[1]; else print $0;}' | awk '{split($0, a, "@"); if (length(a) > 1) print a[2]; else print $0;}' | xargs -n 1 pip install
