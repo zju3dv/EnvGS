@@ -262,7 +262,7 @@ python scripts/preprocess/tools/compute_metadata.py --data_root $easyvolcap_root
 ### Configurations
 
 Given the dataset, you're now prepared to create your corresponding configuration file for *EnvGS*.
-The first file corresponds to the dataset itself, where data loading paths and input ratios or view numbers are defined. Let's put it in [`configs/datasets/envgs/audi.yaml`](configs/datasets/envgs/audi.yaml). You can look at the actual file to get a grasp of what info this file should contain. At the minimum, you should specify the data loading root for the dataset. If you feel unfamiliar with the configuration system, feel free to check out the specific [documentation](../../docs/design/config.md) for that part. The content of the `audi.yaml` (and its parent `envgs.yaml`) file should look something like this:
+The first file corresponds to the dataset itself, where data loading paths and input ratios or view numbers are defined. Let's put it in [`configs/datasets/envgs/audi.yaml`](configs/datasets/envgs/audi.yaml). You can look at the actual file to get a grasp of what info this file should contain. At the minimum, you should specify the data loading root for the dataset. If you feel unfamiliar with the configuration system, feel free to check out the specific [documentation](docs/design/config.md) for that part. The content of the `audi.yaml` (and its parent `envgs.yaml`) file should look something like this:
 
 ```yaml
 # Content of configs/datasets/envgs/envgs.yaml
