@@ -53,7 +53,7 @@ model_cfg:
         min_weight_threshold: 0.1
         # Environment Gaussian
         use_optix_tracing: True
-        acc_filtering_start_iter: 21000
+        acc_filtering_start_iter: -1
         specular_filtering_start_iter: -1 # do not use this
         env_sh_deg: 3
         env_sh_start_iter: 0
