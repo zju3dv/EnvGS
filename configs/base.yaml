@@ -134,6 +134,7 @@ runner_cfg: &runner_cfg
         types: [RENDER, DEPTH, ALPHA]
         result_dir: data/result
         save_tag: ''
+        store_alpha_channel: False
     evaluator_cfg:
         type: VolumetricVideoEvaluator
     recorder_cfg:

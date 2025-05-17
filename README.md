@@ -69,7 +69,7 @@ pip install submodules/diff-surfel-rasterizations/diff-surfel-rasterization-wet 
 Finally, you may want to install the dependencies of the [StableNormal](https://github.com/Stable-X/StableNormal) to prepare monocular normal maps for your custom dataset, you can simply install the dependencies by running the following command:
 
 ```shell
-pip install -r submodules/StableNormal/requirements.txt
+sh submodules/StableNormal/setup.sh
 ```
 
 
