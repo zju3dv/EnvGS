@@ -937,7 +937,7 @@ class VolumetricVideoDataset(Dataset):
         # Maybe load normal images here
         if self.use_normals:
             nm = self.nms[view_index][latent_index]
-            dp, _, _, _ = load_resize_undist_im_bytes(nm, K.numpy(), D.numpy(), ratio, self.center_crop_size, dist_opt_K=self.dist_opt_K, backend=self.backend, encode=False)
+            nm, _, _, _ = load_resize_undist_im_bytes(nm, K.numpy(), D.numpy(), ratio, self.center_crop_size, dist_opt_K=self.dist_opt_K, backend=self.backend, encode=False)
 
         # Image pre cacheing (from disk to memory)
         im = self.ims[view_index][latent_index]
