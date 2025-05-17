@@ -98,7 +98,7 @@ def main(args):
                     else:
                         log(f'cannot find image: {val.name}', 'red')
                         continue
-                os.system(f'ln -s {src_images_dir}/{val.name} {tar_images_dir}/{0:06d}.{args.ext}')
+                os.system(f'ln -s {abspath(join(src_images_dir, val.name))} {tar_images_dir}/{0:06d}.{args.ext}')
 
                 # Increment counter
                 cnt += 1
