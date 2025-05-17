@@ -411,7 +411,7 @@ class EnvGSSampler(Gaussian2DSampler):
             output.spec_map  = middle.spec_map        # (B, P, 1)
             output.rough_map = middle.rough_map       # (B, P, 1)
         # The diffuse RGB output
-        output.dif_rgb_map   = middle.rgb_map.clone()  # (B, P, 3)
+        output.dif_rgb_map   = middle.rgb_map.clone() * (1 - output.spec_map)  # (B, P, 3), visualize the diffuse part
         output.rgb_map       = middle.rgb_map          # (B, P, 3)
 
         # Don't forget the iteration number for later supervision retrieval
@@ -474,6 +474,7 @@ class EnvGSSampler(Gaussian2DSampler):
             # Update the RGB output with the reflection
             output.rgb_map = (1 - output.spec_map) * output.rgb_map + output.spec_map * middle.rgb_map
             output.ref_rgb_map = middle.rgb_map  # (B, P, 3)
+        output.ref_rgb_map = output.ref_rgb_map * output.spec_map * 2  # (B, P, 3), * 2 to make it brighter for better visualization
 
         # Store the environment Gaussian output for supervision
         output.env_opacity = self.env.get_opacity  # (P, 1)
