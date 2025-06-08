@@ -119,6 +119,10 @@ We have provided the dataset configurations for the *Ref-NeRF* and *NeRF-Casting
 
 For the *EnvGS* dataset, you can download it in this [Google Drive link](https://drive.google.com/drive/folders/1ogZF8171GatQokbECf1yCabBwm3IvDSm?usp=sharing). We provide both ***EasyVolcap*** format and ***COLMAP*** format. The preparation is the same as above. After downloading, the ***EasyVolcap*** format extracted files should be placed at `data/datasets/envgs`, and the ***COLMAP*** format extracted files should be placed at `data/datasets/original/envgs`.
 
+### Shiny Blender Dataset
+
+For the *Shiny Blender* dataset, you can download our processed ***EasyVolcap*** format version in this [Google Drive link](https://drive.google.com/file/d/1m5xxViYnneMKv-0sy-3d9g_KNRi6KqfE/view?usp=drive_link), or you can convert the original dataset using the [script](scripts/preprocess/blender_to_easyvolcap.py). The downloaded or converted dataset should be placed at `data/datasets/refnerf/shiny_blender`.
+
 
 ## Usage
 
