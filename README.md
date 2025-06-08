@@ -14,6 +14,14 @@
 </div>
 
 
+***News***:
+
+- 25.03.30: We fix the submodule bugs and make the installation smoother, just follow the instructions, no other extra dependencies are needed.
+- 25.03.22: The training and evaluation code of [*EnvGS*](https://zju3dv.github.io/envgs) has been released.
+- 25.02.27: [*EnvGS*](https://zju3dv.github.io/envgs) has been accepted to CVPR 2025.
+- 25.01.07: The [*2D Gaussian Tracer*](https://github.com/xbillowy/diff-surfel-tracing) for [*EnvGS*](https://zju3dv.github.io/envgs) has been open-sourced.
+
+
 ![teaser](assets/imgs/envgs.png)
 
 https://github.com/xbillowy/assets/diff-surfel-tracing/assets/0259a959-5de2-4cec-bc8d-571209d1ffce
@@ -21,14 +29,6 @@ https://github.com/xbillowy/assets/diff-surfel-tracing/assets/0259a959-5de2-4cec
 https://github.com/xbillowy/assets/diff-surfel-tracing/assets/23b365d1-65a7-46c3-9462-d07e2473a252
 
 https://github.com/xbillowy/assets/diff-surfel-tracing/assets/1d9af444-49e6-4576-8391-c292cad4d9be
-
-
-***News***:
-
-- 25.03.30: We fix the submodule bugs and make the installation smoother, just follow the instructions, no other extra dependencies are needed.
-- 25.03.22: The training and evaluation code of [*EnvGS*](https://zju3dv.github.io/envgs) has been released.
-- 25.02.27: [*EnvGS*](https://zju3dv.github.io/envgs) has been accepted to CVPR 2025.
-- 25.01.07: The [*2D Gaussian Tracer*](https://github.com/xbillowy/diff-surfel-tracing) for [*EnvGS*](https://zju3dv.github.io/envgs) has been open-sourced.
 
 
 ## Installation
