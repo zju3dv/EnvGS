@@ -1,0 +1,11 @@
+configs:
+    - configs/base.yaml # default arguments for the whole codebase
+    - configs/models/envgs_synth.yaml # 2dgs model configuration
+    - configs/datasets/shiny_blender/ball.yaml # dataset usage configuration
+
+model_cfg:
+    sampler_cfg:
+        init_specular: 0.8
+
+# prettier-ignore
+exp_name: {{fileBasenameNoExtension}}

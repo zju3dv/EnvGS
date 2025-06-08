@@ -1,0 +1,7 @@
+configs:
+    - configs/base.yaml # default arguments for the whole codebase
+    - configs/models/envgs_synth.yaml # 2dgs model configuration
+    - configs/datasets/shiny_blender/car.yaml # dataset usage configuration
+
+# prettier-ignore
+exp_name: {{fileBasenameNoExtension}}
