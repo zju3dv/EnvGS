@@ -219,7 +219,7 @@ class VolumetricVideoDataset(Dataset):
         if self.view_sample[1] is not None: self.n_view_total = self.view_sample[1]
         else: self.n_view_total = len(os.listdir(join(self.data_root, self.images_dir)))  # total number of cameras before filtering
         if self.frame_sample[1] is not None: self.n_frames_total = self.frame_sample[1]
-        else: self.n_frames_total = min([len(glob(join(self.data_root, self.images_dir, cam, '*'))) for cam in os.listdir(join(self.data_root, self.images_dir))])  # total number of images before filtering
+        else: self.n_frames_total = min([len(glob(join(self.data_root, self.images_dir, cam, '*'))) for cam in os.listdir(join(self.data_root, self.images_dir)) if isdir(join(self.data_root, self.images_dir)) and not cam.startswith('.')])  # total number of images before filtering
 
         # Rendering and space carving bounds
         assert not (duration is None and use_loaded_time), "When using loaded time, expect the user to provide the dataset duration"
