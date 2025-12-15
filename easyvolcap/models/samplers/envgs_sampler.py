@@ -202,9 +202,8 @@ class EnvGSSampler(Gaussian2DSampler):
         except:
             log(yellow(f"Failed to load the point cloud from {ply_file}, generating random points."))
             xyz = sample_points_subgrid(torch.as_tensor(self.env_bounds), S, N).float()  # (P, 3)
-            rgb = torch.rand(xyz.shape, dtype=torch.float) / 255.0  # (P, 3)
-            save_sfm_ply(ply_file, xyz.numpy(), rgb.numpy() * 255.0)
-
+            rgb = torch.rand(xyz.shape, dtype=torch.float)  # (P, 3)
+            save_sfm_ply(ply_file, xyz.numpy(), (rgb.numpy() * 255.0).astype(np.uint8))
         return xyz, rgb
 
     @torch.no_grad()
