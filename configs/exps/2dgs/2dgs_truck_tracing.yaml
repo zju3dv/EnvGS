@@ -1,0 +1,9 @@
+configs:
+    - configs/exps/2dgs/2dgs_truck.yaml
+
+model_cfg:
+    sampler_cfg:
+        use_optix_tracing: True
+
+# prettier-ignore
+exp_name: {{fileBasenameNoExtension}}

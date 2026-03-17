@@ -1,0 +1,7 @@
+configs:
+    - configs/base.yaml # default arguments for the whole codebase
+    - configs/models/2dgs.yaml # 2dgs model configuration
+    - configs/datasets/tandt/truck.yaml # dataset usage configuration
+
+# prettier-ignore
+exp_name: {{fileBasenameNoExtension}}

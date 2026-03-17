@@ -1,0 +1,70 @@
+# Default config for the 2DGS model
+runner_cfg:
+    visualizer_cfg:
+        types: ['RENDER', 'DEPTH', 'ALPHA', 'NORMAL', 'SURFACE_NORMAL']
+    optimizer_cfg:
+        lr: 0.001 # add default lr to params of other modules
+        eps: 1.e-15
+        lr_table:
+            _xyz: 0.00016
+            _features_dc: 0.0025
+            _features_rest: 0.000125
+            _opacity: 0.05
+            _scaling: 0.005
+            _rotation: 0.001
+    scheduler_cfg:
+        type: NoopLR
+    epochs: 60
+    ep_iter: 500 # 30000 by paper
+    save_latest_ep: 10
+    save_ep: 30
+    eval_ep: 10
+    log_interval: 1
+
+model_cfg:
+    chunkify_rays: False # for now, no ray chunking for ENeRF
+    let_user_handle_input: True # let the user handle the output and input
+    network_cfg:
+        type: NoopNetwork # no network for this
+        _delete_: True
+    renderer_cfg:
+        type: NoopRenderer
+    sampler_cfg:
+        type: Gaussian2DSampler
+        xyz_lr_scheduler: # same as the 2DGS code
+            lr_init: 0.00016
+            lr_final: 0.0000016
+            lr_delay_mult: 0.01
+            max_steps: 30000
+        min_weight_threshold: 0.1
+    supervisor_cfg:
+        supervisor_cfgs:
+            - type: VolumetricVideoSupervisor
+            - type: EnvGSSupervisor
+        img_loss_type: L1 # use perceptual loss
+        img_loss_weight: 0.8
+        ssim_loss_weight: 0.2
+        # Low normal constraint weight for distant areas
+        gs_norm_loss_weight: 0.04
+        gs_norm_loss_start_iter: 3000
+        use_dpt_scale_gs_norm_loss: True
+        gs_dist_loss_weight: 0.0 # do not use this
+        # Use other normal priors
+        norm_loss_weight: 0.01
+        norm_loss_start_iter: 0
+        use_dpt_scale_norm_loss: True
+
+dataloader_cfg: &dataloader_cfg
+    dataset_cfg: &dataset_cfg
+        n_rays: -1
+        use_normals: True # use monocular normal prior
+    batch_sampler_cfg: &batch_sampler_cfg
+        type: BatchSampler
+        batch_size: 1
+
+val_dataloader_cfg: # we see the term "dataloader" a one word?
+    <<: *dataloader_cfg
+    dataset_cfg:
+        <<: *dataset_cfg
+    batch_sampler_cfg:
+        <<: *batch_sampler_cfg
